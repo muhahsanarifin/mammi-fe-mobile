@@ -16,6 +16,15 @@ const styles = StyleSheet.create({
     position: 'relative',
     justifyContent: 'center',
   },
+  titleText: {
+    position: 'absolute',
+    fontWeight: '900',
+    fontSize: 64,
+    width: 146,
+    right: 40,
+    top: 40,
+    color: '#000000',
+  },
   image: {
     width: 400,
     height: 400,
@@ -49,7 +58,7 @@ const styles = StyleSheet.create({
     borderBottomColor: '#9A9A9D',
     fontSize: 17,
     color: '#9A9A9D',
-    fontWeight: '600'
+    fontWeight: '600',
   },
   btnRegister: {
     backgroundColor: '#6A4029',

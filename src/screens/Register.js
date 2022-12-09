@@ -10,6 +10,9 @@ const Register = () => {
   return (
     <View style={styles.container}>
       <View style={styles.imageSection}>
+        <Text style={styles.titleText}>
+          Sign Up
+        </Text>
         <Image
           source={require('../assets/images/girl-chilling-exploring-on-the-phone.png')}
           style={styles.image}
@@ -33,7 +36,7 @@ const Register = () => {
             onPress={() => navigation.push('Register')}
             styleBtn={styles.btnRegister}
             styleText={styles.btnRegisterText}
-            titleText={`Create New Account`}
+            titleText={`Create Account`}
           />
         </Form>
       </View>
