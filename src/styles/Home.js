@@ -134,8 +134,24 @@ const styles = StyleSheet.create({
     fontWeight: '700',
     color: '#6A4029',
   },
-  
+
   // TODO research
+
+  hmContainer: {
+    backgroundColor: '#F2F2F2',
+    flex: 1,
+    flexDirection: 'column',
+  },
+  navigationContainer: {
+    // backgroundColor: '#ecf0f1',
+    // borderTopRightRadius: 30,
+  },
+  paragraph: {
+    padding: 16,
+    fontSize: 15,
+    textAlign: 'center',
+  },
+
   profile: {
     // backgroundColor: 'red',
     flexDirection: 'column',
