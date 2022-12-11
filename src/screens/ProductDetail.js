@@ -9,7 +9,12 @@ import Button from '../components/Button';
 const ProductDetail = ({navigation}) => {
   return (
     <View style={styles.container}>
-      <Header onPressToBack={() => navigation.goBack()} onPressToCart={() => navigation.navigate('Cart')}/>
+      <Header
+        sourceBackIcon={require('../assets/icons/chevron-left.png')}
+        sourceCartIcon={require('../assets/icons/cart.png')}
+        onPressToBack={() => navigation.goBack()}
+        onPressToCart={() => navigation.navigate('Cart')}
+      />
       <View style={styles.imageSection}>
         <Image
           source={require('../assets/images/image-12.png')}
@@ -33,7 +38,7 @@ const ProductDetail = ({navigation}) => {
         </Text>
       </View>
       <Button
-        // onPress={}
+        onPress={()=> navigation.push('Cart')}
         styleBtn={styles.btnAddToChart}
         styleText={styles.btnAddToChartText}
         titleText={`Add to cart`}

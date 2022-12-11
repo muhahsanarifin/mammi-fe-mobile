@@ -106,7 +106,9 @@ const Home = ({navigation}) => {
             <Text style={styles.listProduct}>Non Coffee</Text>
           </View>
           <View style={styles.products}>
-            <Text style={styles.seeMore}>See more</Text>
+            <TouchableOpacity onPress={() => navigation.navigate('Products')}>
+              <Text style={styles.seeMore}>See more</Text>
+            </TouchableOpacity>
             <View style={styles.product}>
               <TouchableOpacity
                 onPress={() => navigation.navigate('ProductDetail')}>

@@ -20,7 +20,8 @@ const styles = StyleSheet.create({
   headerTitle: {
     fontSize: 18,
     fontWeight: '800',
-    fontFamily: 'Poppins'
+    fontFamily: 'Poppins',
+    color: '#000000',
   },
   cartIconSection: {
     // backgroundColor: 'red',

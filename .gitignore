@@ -66,3 +66,6 @@ buck-out/
 # Components
 HamburgerMenu.jsx
 Card.jsx
+
+# Screens
+Favorite.js

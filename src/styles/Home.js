@@ -8,6 +8,7 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     padding: 20,
   },
+
   // TODO: Header
   header: {
     // backgroundColor: 'yellow',
@@ -96,6 +97,7 @@ const styles = StyleSheet.create({
     textAlign: 'right',
     marginBottom: 50,
     color: '#6A4029',
+    fontWeight: '600',
   },
 
   product: {
@@ -106,6 +108,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFFFFF',
     borderRadius: 30,
     width: 220,
+    elevation: 20,
+    shadowColor: '#52006A',
   },
 
   image: {
@@ -120,7 +124,8 @@ const styles = StyleSheet.create({
   title: {
     position: 'relative',
     // backgroundColor: 'red',
-    marginBottom: 5,
+    top: -20,
+    padding: 5,
     fontWeight: '800',
     width: 125,
     fontSize: 22,
@@ -130,7 +135,9 @@ const styles = StyleSheet.create({
   price: {
     position: 'relative',
     // backgroundColor: 'green',
-    marginBottom: 5,
+    // marginBottom: 5,
+    top: -10,
+    padding: 10,
     fontWeight: '700',
     color: '#6A4029',
   },

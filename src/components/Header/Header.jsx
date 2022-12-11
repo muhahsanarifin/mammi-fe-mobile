@@ -3,12 +3,12 @@ import React from 'react';
 
 import styles from '../../styles/Header';
 
-const Header = ({headerTitle, onPressToBack, onPressToCart}) => {
+const Header = ({sourceBackIcon,sourceCartIcon,headerTitle, onPressToBack, onPressToCart}) => {
   return (
     <View style={styles.headerSection}>
       <TouchableOpacity style={styles.backIconSection} onPress={onPressToBack}>
         <Image
-          source={require('../../assets/icons/chevron-left.png')}
+          source={sourceBackIcon}
           style={styles.backIcon}
         />
       </TouchableOpacity>
@@ -18,7 +18,7 @@ const Header = ({headerTitle, onPressToBack, onPressToCart}) => {
         style={styles.cartIconSection}
         onPress={onPressToCart}>
         <Image
-          source={require('../../assets/icons/cart.png')}
+          source={sourceCartIcon}
           style={styles.cartIcon}
         />
       </TouchableOpacity>

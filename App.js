@@ -19,6 +19,9 @@ import Cart from './src/screens/Cart';
 import Profile from "./src/screens/Profile";
 import EditProfile from "./src/screens/EditProfile";
 import Chat from "./src/screens/Chat";
+import Payment from "./src/screens/Payment";
+// import Favorite from "./src/screens/Favorite";
+import Products from './src/screens/Products';
 
 const App = () => {
   const Stack = createStackNavigator();
@@ -51,6 +54,11 @@ const App = () => {
           options={{headerShown: false}}
         />
         <Stack.Screen
+          name="Products"
+          component={Products}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
           name="ProductDetail"
           component={ProductDetail}
           options={{headerShown: false}}
@@ -63,6 +71,16 @@ const App = () => {
         <Stack.Screen
           name="Cart"
           component={Cart}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="Checkout"
+          component={Checkout}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="Payment"
+          component={Payment}
           options={{headerShown: false}}
         />
         <Stack.Screen
@@ -85,6 +103,11 @@ const App = () => {
           component={Chat}
           options={{headerShown: false}}
         />
+        {/* <Stack.Screen
+          name="Favorite"
+          component={Favorite}
+          options={{headerShown: false}}
+        /> */}
       </Stack.Navigator>
     </NavigationContainer>
   );
