@@ -3,10 +3,13 @@ import Form from 'react-native-form';
 import React from 'react';
 
 import styles from '../styles/Register';
-
 import Button from '../components/Button';
 
 const Register = () => {
+  // const handleSubmit = () => {
+  //   console.log('Love your self')
+  // }
+
   return (
     <View style={styles.container}>
       <View style={styles.imageSection}>
@@ -33,7 +36,7 @@ const Register = () => {
             style={styles.textInput}
           />
           <Button
-            onPress={() => navigation.push('Register')}
+            // onPress={handleSubmit}
             styleBtn={styles.btnRegister}
             styleText={styles.btnRegisterText}
             titleText={`Create Account`}
