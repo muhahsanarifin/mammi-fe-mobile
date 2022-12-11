@@ -49,6 +49,7 @@ const Login = () => {
             value={password}
             placeholder="Enter your password"
             style={styles.textInput}
+            secureTextEntry={true}
             onChangeText={value => setPassword(value)}
           />
 
