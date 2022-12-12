@@ -73,15 +73,13 @@ const styles = StyleSheet.create({
   },
   listProducts: {
     flexDirection: 'row',
-    flexWrap: 'wrap',
-    justifyContent: 'center',
   },
 
   listProduct: {
     // backgroundColor: 'red',
-    flexDirection: 'row',
     fontSize: 17,
-    padding: 5,
+    paddingVertical: 5,
+    paddingHorizontal: 15,
     color: '#9A9A9D',
   },
 
@@ -92,10 +90,9 @@ const styles = StyleSheet.create({
   },
 
   seeMore: {
-    padding: 5,
     // backgroundColor: 'yellow',
+    padding: 5,
     textAlign: 'right',
-    marginBottom: 50,
     color: '#6A4029',
     fontWeight: '600',
   },
@@ -110,6 +107,8 @@ const styles = StyleSheet.create({
     width: 220,
     elevation: 20,
     shadowColor: '#52006A',
+    marginHorizontal: 20,
+    marginVertical: 40,
   },
 
   image: {

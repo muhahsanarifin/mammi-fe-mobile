@@ -1,4 +1,4 @@
-import {View, Text, Image} from 'react-native';
+import {View, Text, Image, ScrollView} from 'react-native';
 import React from 'react';
 
 import Header from '../components/Header/Header';
@@ -14,23 +14,25 @@ const Cart = ({navigation}) => {
         onPressToBack={() => navigation.goBack()}
       />
       <View style={styles.productsList}>
-        <View style={styles.product}>
-          <Image
-            source={require('../assets/images/image-12.png')}
-            style={styles.imgProduct}
-          />
-          <View style={styles.detailProduct}>
-            <Text style={styles.titleProduct}>{`Hazelnut Latte`}</Text>
-            <View style={styles.subDetailProduct}>
-              <Text>{`IDR 25.000`}</Text>
-              <View style={styles.addQuantityProduct}>
-                <Text style={styles.minus}>-</Text>
-                <Text style={styles.numeric}>{`1`}</Text>
-                <Text style={styles.plus}>+</Text>
+        <ScrollView>
+          <View style={styles.product}>
+            <Image
+              source={require('../assets/images/image-12.png')}
+              style={styles.imgProduct}
+            />
+            <View style={styles.detailProduct}>
+              <Text style={styles.titleProduct}>{`Hazelnut Latte`}</Text>
+              <View style={styles.subDetailProduct}>
+                <Text>{`IDR 25.000`}</Text>
+                <View style={styles.addQuantityProduct}>
+                  <Text style={styles.minus}>-</Text>
+                  <Text style={styles.numeric}>{`1`}</Text>
+                  <Text style={styles.plus}>+</Text>
+                </View>
               </View>
             </View>
           </View>
-        </View>
+        </ScrollView>
       </View>
       <Button
         onPress={() => navigation.push('Checkout')}

@@ -5,6 +5,7 @@ import {
   TextInput,
   DrawerLayoutAndroid,
   TouchableOpacity,
+  ScrollView
 } from 'react-native';
 import React, {useRef} from 'react';
 import Footer from '../components/Footer/Footer'
@@ -122,26 +123,41 @@ const Home = ({navigation}) => {
         </View>
         <View style={styles.productSection}>
           <View style={styles.listProducts}>
-            <Text style={styles.listProduct}>Favorite</Text>
-            <Text style={styles.listProduct}>Promo</Text>
-            <Text style={styles.listProduct}>Coffee</Text>
-            <Text style={styles.listProduct}>Non Coffee</Text>
+            <ScrollView horizontal>
+              <Text style={styles.listProduct}>Favorite</Text>
+              <Text style={styles.listProduct}>Promo</Text>
+              <Text style={styles.listProduct}>Coffee</Text>
+              <Text style={styles.listProduct}>Non Coffee</Text>
+            </ScrollView>
           </View>
           <View style={styles.products}>
             <TouchableOpacity onPress={() => navigation.navigate('Products')}>
               <Text style={styles.seeMore}>See more</Text>
             </TouchableOpacity>
-            <View style={styles.product}>
-              <TouchableOpacity
-                onPress={() => navigation.navigate('ProductDetail')}>
-                <Image
-                  source={require('../assets/images/image-12.png')}
-                  style={styles.image}
-                />
-              </TouchableOpacity>
-              <Text style={styles.title}>{`Hazelnut Latte`}</Text>
-              <Text style={styles.price}>{`IDR 25.000`}</Text>
-            </View>
+            <ScrollView horizontal>
+              <View style={styles.product}>
+                <TouchableOpacity
+                  onPress={() => navigation.navigate('ProductDetail')}>
+                  <Image
+                    source={require('../assets/images/image-12.png')}
+                    style={styles.image}
+                  />
+                </TouchableOpacity>
+                <Text style={styles.title}>{`Hazelnut Latte`}</Text>
+                <Text style={styles.price}>{`IDR 25.000`}</Text>
+              </View>
+              <View style={styles.product}>
+                <TouchableOpacity
+                  onPress={() => navigation.navigate('ProductDetail')}>
+                  <Image
+                    source={require('../assets/images/image-12.png')}
+                    style={styles.image}
+                  />
+                </TouchableOpacity>
+                <Text style={styles.title}>{`Hazelnut Latte`}</Text>
+                <Text style={styles.price}>{`IDR 25.000`}</Text>
+              </View>
+            </ScrollView>
           </View>
         </View>
         <Footer

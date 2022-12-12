@@ -12,6 +12,8 @@ const styles = StyleSheet.create({
   mainContet: {
     flex: 1,
     // backgroundColor: 'red',
+    flexDirection: 'column',
+    justifyContent: 'center'
   },
 
   deliverySection: {
@@ -46,15 +48,21 @@ const styles = StyleSheet.create({
   },
 
   street: {
+    // backgroundColor: 'blue',
     fontSize: 17,
     fontWeight: '400',
+    borderBottomWidth: 1,
+    borderBottomColor: '#000000',
   },
   streetDetail: {
     // backgroundColor: 'red',
     fontSize: 17,
     fontWeight: '400',
+    borderBottomWidth: 1,
+    borderBottomColor: '#000000',
   },
   phoneNumber: {
+    // backgroundColor: 'blue',
     fontSize: 17,
     fontWeight: '400',
   },
@@ -70,6 +78,10 @@ const styles = StyleSheet.create({
     marginVertical: 20,
     borderRadius: 30,
     paddingHorizontal: 30,
+  },
+
+  radioGrupStyle: {
+    backgroundColor: 'red',
   },
 
   deliveryItem: {
