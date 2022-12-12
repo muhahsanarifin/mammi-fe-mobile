@@ -16,10 +16,10 @@ import ProductDetail from './src/screens/ProductDetail';
 import History from './src/screens/History';
 import Checkout from './src/screens/Checkout';
 import Cart from './src/screens/Cart';
-import Profile from "./src/screens/Profile";
-import EditProfile from "./src/screens/EditProfile";
-import Chat from "./src/screens/Chat";
-import Payment from "./src/screens/Payment";
+import Profile from './src/screens/Profile';
+import EditProfile from './src/screens/EditProfile';
+import Chat from './src/screens/Chat';
+import Payment from './src/screens/Payment';
 // import Favorite from "./src/screens/Favorite";
 import Products from './src/screens/Products';
 

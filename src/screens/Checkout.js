@@ -21,9 +21,21 @@ const Checkout = ({navigation}) => {
           <Text style={styles.btnChange}>change</Text>
         </View>
         <View style={styles.addressSection}>
-          <TextInput placeholder="Iskandar Street" style={styles.street} />
-          <TextInput value={``} style={styles.streetDetail} />
-          <TextInput placeholder="+62 81348287878" style={styles.phoneNumber} />
+          <TextInput
+            placeholder=""
+            value={`Iskandar Street`}
+            style={styles.street}
+          />
+          <TextInput
+            value={`Km 5 refinery road oppsite republic road, effurun, Jakarta`}
+            style={styles.streetDetail}
+            // placeholder=""
+          />
+          <TextInput
+            // placeholder=""
+            value={`+62 81348287878`}
+            style={styles.phoneNumber}
+          />
         </View>
         <Text style={styles.deliveryTitle}>Delivery methods</Text>
         <View style={styles.deliveryMethodsSection}>

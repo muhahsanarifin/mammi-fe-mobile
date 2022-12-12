@@ -3,6 +3,7 @@ import Form from 'react-native-form';
 import React from 'react';
 import {useState} from 'react';
 import {useNavigation} from '@react-navigation/native';
+import Axios from 'axios';
 
 import styles from '../styles/Login';
 import Button from '../components/Button';
@@ -10,21 +11,28 @@ import Button from '../components/Button';
 const Login = () => {
   const navigation = useNavigation();
 
-  // TODO: Sample
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  // const tryToHandleLogin = () => {
-  //   const data = {
-  //     email,
-  //     password
-  //   }
-  //   console.log(data);
-  // }
+  // TODO: Test API
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const tryToHandleLogin = async () => {
+    const data = {
+      email,
+      password,
+    };
+    try {
+      const response = await Axios.post(`http://192.168.18.90:8080/api/v1/auth`,data
+      );
+      console.log(response);
+      navigation.push('Home');
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   // TODO: Pass to Home screen to build styling.
-  const tryToHandleLogin = () => {
-    navigation.push('Home')
-  }
+  // const tryToHandleLogin = () => {
+  //   navigation.push('Home')
+  // }
 
   return (
     <View style={styles.container}>

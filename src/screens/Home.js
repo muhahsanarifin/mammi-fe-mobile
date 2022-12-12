@@ -14,6 +14,24 @@ import styles from '../styles/Home';
 const Home = ({navigation}) => {
   const drawer = useRef(null);
 
+  // TODO: Test API
+  // const handleLogout = async() => {
+  //   let token = 
+  //   try {
+  //     const response = await Axios.delete(
+  //       `http://192.168.18.90:8080/api/v1/auth/logout`,
+  //       {
+  //         headers: {
+  //           'x-access-token': token,
+  //         },
+  //       },
+  //     );
+  //     console.log(response.data);
+  //   } catch (error) {
+  //     console.log(error.message)
+  //   }
+  // }
+
   // TODO: Navigation view
   const navigationView = () => (
     <View style={[styles.hmContainer, styles.navigationContainer]}>
@@ -62,7 +80,11 @@ const Home = ({navigation}) => {
           <Text style={styles.nameList}>{`Security`}</Text>
         </View>
         <View style={[styles.list, styles.signOutList]}>
-          <Text style={styles.nameList}>{`Sign-Out`}</Text>
+          <TouchableOpacity 
+          // onPress={handleLogout}
+          >
+            <Text style={styles.nameList}>{`Sign-Out`}</Text>
+          </TouchableOpacity>
         </View>
       </View>
     </View>
