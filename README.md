@@ -103,4 +103,5 @@ $ npm run android
 <img width="414" height="896" src="./src/assets/images/github/Products.png" alt="Products">
 <img width="414" height="896" src="./src/assets/images/github/Cart.png" alt="Cart">
 <img width="414" height="896" src="./src/assets/images/github/Checkout.png" alt="Checkout">
+<img width="414" height="896" src="./src/assets/images/github/Profile.png" alt="Profile">
 </div>
