@@ -19,7 +19,7 @@ const editProduct = (body, id, token) =>
 const deleteProduct = (id, token) =>
   Axios.delete(`${BASE_URL}/products/${id}`, config(token));
 
-const createProduct = (id, token) =>
-  Axios.post(`${BASE_URL}products/${id}`, config(token));
+const createProduct = (body, token) =>
+  Axios.post(`${BASE_URL}products`, body, config(token));
 
 export {getProducts, editProduct, deleteProduct, createProduct};
