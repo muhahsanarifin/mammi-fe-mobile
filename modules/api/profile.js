@@ -14,10 +14,10 @@ const config = token => {
 const editprofile = (body, token) =>
   Axios.patch(`${BASE_URL}/users/profile/edit`, body, config(token));
 
-const getprofilecontact = (token, id) =>
+const getprofilecontact = (id, token) =>
   Axios.get(`${BASE_URL}/users/profile/${id}`, config(token));
 
-const getprofiledetail = (token, id) =>
+const getprofiledetail = (id, token) =>
   Axios.get(`${BASE_URL}/users/${id}`, config(token));
 
 export {editprofile, getprofilecontact, getprofiledetail};
