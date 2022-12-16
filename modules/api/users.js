@@ -16,8 +16,7 @@ const getUsers = token => Axios.get(`${BASE_URL}/users`, config(token));
 const deleteUser = token =>
   Axios.delete(`${BASE_URL}/users/user/delete`, config(token));
 
-const register = (body, token) =>
-  Axios.post(`${BASE_URL}/users`, body, config(token));
+const register = body => Axios.post(`${BASE_URL}/users`, body);
 
 const editPassword = (body, token) =>
   Axios.patch(`${BASE_URL}/users/password/edit`, body, config(token));
