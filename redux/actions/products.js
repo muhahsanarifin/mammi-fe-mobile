@@ -9,7 +9,7 @@ import {actionStrings} from './actionStrings';
 
 const {Pending, Rejected, Fulfilled} = ActionType;
 
-// TODO: getProducts actions
+// TODO: Get Products actions
 const getProductsPending = () => ({
   type: actionStrings.getProducts.concat('-', Pending),
 });
@@ -24,7 +24,7 @@ const getProductsFulfilled = data => ({
   payload: {data},
 });
 
-// TODO: editProduct actions
+// TODO: Edit Product actions
 const editProductPending = () => ({
   type: actionStrings.editProduct.concat('-', Pending),
 });
@@ -39,7 +39,7 @@ const editProductFulfilled = data => ({
   payload: {data},
 });
 
-// TODO: deleteProduct actions
+// TODO: Delete Product actions
 const deleteProductPending = () => ({
   type: actionStrings.deleteProduct.concat('-', Pending),
 });
@@ -54,7 +54,7 @@ const deleteProductFulfilled = data => ({
   payload: {data},
 });
 
-// TODO: createProduct actions
+// TODO: Create Product actions
 const createProductPending = () => ({
   type: actionStrings.createProduct.concat('-', Pending),
 });
