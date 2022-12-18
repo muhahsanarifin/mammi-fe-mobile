@@ -14,7 +14,7 @@ const loginRejected = error => ({
   payload: {error},
 });
 
-const loginFulfilled = (data) => ({
+const loginFulfilled = data => ({
   type: actionStrings.authLogin.concat('-', Fulfilled),
   payload: {data},
 });
@@ -35,25 +35,24 @@ const logoutFulfilled = data => ({
 });
 
 // TODO: Login Thunk
-const loginThunk = (body, cbSuccess, cbDenied, cbLoading) => {
-  return async (dispatch) => {
+const loginThunk = (body, cbSuccess, cbDenied) => {
+  return async dispatch => {
     try {
       dispatch(loginPending());
-      typeof cbLoading === 'function' && cbLoading();
       const result = await login(body);
-      console.log(result.data);
       dispatch(loginFulfilled(result.data));
-      typeof cbSuccess === 'function' && cbSuccess();
+      typeof cbSuccess === 'function' && cbSuccess(result.data.result.message);
     } catch (error) {
       dispatch(loginRejected(error));
-      typeof cbDenied === 'function' && cbDenied();
+      typeof cbDenied === 'function' &&
+        cbDenied(error.response.data.result.message);
     }
   };
 };
 
 // TODO: Logout Thunk
-const logoutThunk = (token) => {
-  return async (dispatch) => {
+const logoutThunk = token => {
+  return async dispatch => {
     try {
       dispatch(logoutPending());
       const result = await logout(token);
@@ -61,8 +60,8 @@ const logoutThunk = (token) => {
     } catch (error) {
       dispatch(logoutRejected(error));
     }
-  }
-}
+  };
+};
 
 const authAction = {
   loginThunk,
