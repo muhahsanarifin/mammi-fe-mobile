@@ -75,7 +75,17 @@ const productReducer = (prevState = initialState, {payload, type}) => {
         isLoading: false,
         isError: true,
         isFulfilled: true,
-        result: payload.data.result,
+        resutl: [
+          {
+            id: payload.data.result.id,
+            product_name: payload.data.result.product_name,
+            price: payload.data.result.price,
+            image: payload.data.result.image,
+            created_at: payload.data.result.created_at,
+            updated_at: payload.data.result.updated_at,
+            description: payload.data.result.description,
+          },
+        ],
       };
     case deleteProduct.concat('-', Pending):
       return {
