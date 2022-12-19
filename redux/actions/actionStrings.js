@@ -2,9 +2,9 @@ export const actionStrings = {
   // TODO: auth action string
   authLogin: 'AUTH_LOGIN',
   authLogout: 'AUTH_LOGOUT',
-  getUsers: 'USERS_GET',
 
   // TODO: user action string
+  getUsers: 'USERS_GET',
   deleteUser: 'USER_DELETE',
   userRegister: 'USER_REGISTER',
   editPassword: 'PASSWORD_EDIT',
