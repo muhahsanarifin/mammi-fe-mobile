@@ -2,64 +2,73 @@ import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
-    // backgroundColor: 'green',
     backgroundColor: '#F2F2F2',
     flex: 1,
     flexDirection: 'column',
     padding: 20,
   },
   imageSection: {
-    // backgroundColor: 'yellow',
-    position: 'relative',
     flex: 1,
     flexDirection: 'row',
-    position: 'relative',
     justifyContent: 'center',
   },
   titleText: {
-    position: 'absolute',
     fontWeight: '900',
-    fontSize: 64,
+    fontSize: 42,
     width: 146,
-    right: 40,
-    top: 40,
     color: '#000000',
+    position: 'absolute',
+    top: 50,
+    right: 20,
   },
   image: {
-    width: 400,
-    height: 400,
-    position: 'absolute',
+    width: 301,
+    height: 286,
     alignSelf: 'center',
   },
   formSection: {
-    // backgroundColor: 'red',
-    position: 'relative',
     flex: 1,
     flexDirection: 'row',
-    position: 'relative',
     justifyContent: 'center',
     alignItems: 'center',
   },
 
   form: {
-    // backgroundColor: 'blue',
     display: 'flex',
     flexDirection: 'column',
     width: '85%',
   },
 
-  textInput: {
-    position: 'relative',
+  textInputFirst: {
     fontFamily: 'Poppins',
     marginTop: 10,
     marginBottom: 10,
     width: 'auto',
     borderBottomWidth: 1,
     borderBottomColor: '#9A9A9D',
-    fontSize: 17,
+    fontSize: 14,
     color: '#9A9A9D',
     fontWeight: '600',
   },
+
+  textInputSecond: {
+    fontFamily: 'Poppins',
+    marginTop: 10,
+    marginBottom: 10,
+    width: 'auto',
+    borderBottomWidth: 1,
+    borderBottomColor: '#9A9A9D',
+    fontSize: 14,
+    color: '#9A9A9D',
+    fontWeight: '600',
+    flex: 1,
+  },
+
+  textInputxPasswordToggle: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+
   btnRegister: {
     backgroundColor: '#6A4029',
     flexDirection: 'row',
