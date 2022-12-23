@@ -2,65 +2,68 @@ import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
-    // backgroundColor: 'green',
     backgroundColor: '#F2F2F2',
     flex: 1,
     flexDirection: 'column',
     padding: 20,
   },
   imageSection: {
-    // backgroundColor: 'yellow',
     display: 'flex',
-    position: 'relative',
     flex: 1,
     flexDirection: 'row',
     justifyContent: 'center',
+    alignItems: 'center',
   },
   titleText: {
-    // backgroundColor: 'blue',
     fontFamily: 'Poopins',
-    position: 'absolute',
     fontWeight: '900',
+    width: 120,
     fontSize: 64,
-    width: 135,
-    right: 0,
-    top: 120,
     color: '#000000',
   },
   image: {
-    // backgroundColor: 'green',
-    position: 'relative',
-    width: '100%',
-    height: '100%',
+    width: 140,
+    height: 321,
   },
   formSection: {
-    // backgroundColor: 'red',
-    position: 'relative',
     flex: 1,
     flexDirection: 'row',
-    position: 'relative',
     justifyContent: 'center',
     alignItems: 'center',
   },
 
   form: {
-    // backgroundColor: 'blue',
     display: 'flex',
     flexDirection: 'column',
     width: '85%',
   },
 
-  textInput: {
+  textInputFirst: {
     fontFamily: 'Poppins',
-    position: 'relative',
+    width: 'auto',
+    borderBottomWidth: 1,
+    borderBottomColor: '#9A9A9D',
+    fontSize: 14,
+    color: '#9A9A9D',
+    fontWeight: '600',
+  },
+
+  textInputSecond: {
+    fontFamily: 'Poppins',
     marginTop: 10,
     marginBottom: 10,
     width: 'auto',
     borderBottomWidth: 1,
     borderBottomColor: '#9A9A9D',
-    fontSize: 17,
+    fontSize: 14,
     color: '#9A9A9D',
     fontWeight: '600',
+    flex: 1,
+  },
+
+  textInputxPasswordToggle: {
+    flexDirection: 'row',
+    alignItems: 'center',
   },
 
   textForgotPassword: {
@@ -95,7 +98,6 @@ const styles = StyleSheet.create({
   },
 
   btnGoogle: {
-    position: 'relative',
     backgroundColor: '#FFFFFF',
     flexDirection: 'row',
     alignItems: 'center',
@@ -118,7 +120,6 @@ const styles = StyleSheet.create({
   },
 
   iconGoogle: {
-    position: 'relative',
     marginRight: 5,
     width: 28,
     height: 28,
