@@ -2,12 +2,15 @@ import {ActionType} from 'redux-promise-middleware';
 import {actionStrings} from '../actions/actionStrings';
 
 const initialState = {
-  result: {
+  userResult: {
     dataCount: null,
     next: null,
     previous: null,
     totalPages: null,
     data: [],
+  },
+  registerUserResult: {
+    message: '',
   },
   isLoading: false,
   isError: false,
@@ -32,7 +35,7 @@ const userReducer = (prevState = initialState, {payload, type}) => {
         isLoading: false,
         isError: true,
         isFulfilled: false,
-        err: payload.error.response?.data.result.message,
+        err: payload.error.response?.data.result.msg,
       };
     case getUsers.concat('-', Fulfilled):
       return {
@@ -55,7 +58,7 @@ const userReducer = (prevState = initialState, {payload, type}) => {
         isLoading: false,
         isError: true,
         isFulfilled: false,
-        err: payload.error.response.data.result.message,
+        err: payload.error.response?.data.result.msg,
       };
     case deleteUser.concat('-', Fulfilled):
       return {
@@ -85,7 +88,7 @@ const userReducer = (prevState = initialState, {payload, type}) => {
         isLoading: false,
         isError: false,
         isFulfilled: true,
-        result: payload.data,
+        result: payload.data.message,
       };
     case editPassword.concat('-', Pending):
       return {
@@ -108,7 +111,7 @@ const userReducer = (prevState = initialState, {payload, type}) => {
         isLoading: false,
         isError: false,
         isFulfilled: true,
-        result: payload.data.result.message,
+        result: payload.data.msg,
       };
 
     default:

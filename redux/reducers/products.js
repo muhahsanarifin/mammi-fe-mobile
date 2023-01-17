@@ -44,7 +44,7 @@ const productReducer = (prevState = initialState, {payload, type}) => {
         isLoading: false,
         isError: true,
         isFulfilled: false,
-        err: payload.error.response?.data.result.message,
+        err: payload.error.response?.data.result.msg,
       };
     case getProducts.concat('-', Fulfilled):
       return {
@@ -99,7 +99,7 @@ const productReducer = (prevState = initialState, {payload, type}) => {
         ...prevState,
         isLoading: false,
         isError: true,
-        isFulfilled: true,
+        isFulfilled: false,
       };
     case deleteProduct.concat('-', Fulfilled):
       return {
@@ -107,6 +107,29 @@ const productReducer = (prevState = initialState, {payload, type}) => {
         isLoading: true,
         isError: false,
         isFulfilled: true,
+      };
+    case createProduct.concat('-', Pending):
+      return {
+        ...prevState,
+        isLoading: true,
+        isError: false,
+        isFulfilled: false,
+      };
+    case createProduct.concat('-', Rejected):
+      return {
+        ...prevState,
+        isLoading: false,
+        isError: true,
+        isFulfilled: false,
+        err: payload.error.response?.data.result.msg,
+      };
+    case createProduct.concat('-', Fulfilled):
+      return {
+        ...prevState,
+        isLoading: false,
+        isError: false,
+        isFulfilled: true,
+        resutl: payload.data,
       };
 
     default:

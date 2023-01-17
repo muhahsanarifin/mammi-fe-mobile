@@ -38,7 +38,7 @@ const transactionReducer = (prevState = initialState, {payload, type}) => {
         isLoading: false,
         isError: true,
         isFulfilled: false,
-        err: payload.error.response?.data.result.message,
+        err: payload.error.response?.data.result.msg,
       };
     case getTransactions.concat('-', Fulfilled):
       return {
@@ -61,7 +61,7 @@ const transactionReducer = (prevState = initialState, {payload, type}) => {
         isLoading: false,
         isError: true,
         isFulfilled: false,
-        err: payload.error.response?.data.result.message,
+        err: payload.error.response?.data.result.msg,
       };
     case createTransaction.concat('-', Fulfilled):
       return {
@@ -98,7 +98,7 @@ const transactionReducer = (prevState = initialState, {payload, type}) => {
         isLoading: false,
         isError: true,
         isFulfilled: false,
-        err: payload.error.response?.data.result.message,
+        err: payload.error.response?.data.result.msg,
       };
     case editTransaction.concat('-', Fulfilled):
       return {
@@ -121,7 +121,7 @@ const transactionReducer = (prevState = initialState, {payload, type}) => {
         isLoading: false,
         isError: true,
         isFulfilled: false,
-        err: payload.error.response?.data.result.message,
+        err: payload.error.response?.data.result.msg,
       };
     case deleteTransaction.concat('-', Fulfilled):
       return {
@@ -130,7 +130,7 @@ const transactionReducer = (prevState = initialState, {payload, type}) => {
         isError: false,
         isFulfilled: true,
         result: {
-          message: payload.data.result.message,
+          message: payload.data.result.msg,
         },
       };
     case getHistoryransaction.concat('-', Pending):
@@ -146,7 +146,7 @@ const transactionReducer = (prevState = initialState, {payload, type}) => {
         isLoading: false,
         isError: true,
         isFulfilled: false,
-        err: payload.error.response?.data.result.message,
+        err: payload.error.response?.data.result.msg,
       };
     case getHistoryransaction.concat('-', Fulfilled):
       return {

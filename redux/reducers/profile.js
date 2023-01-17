@@ -26,7 +26,7 @@ const profileReducer = (prevState = initialState, {payload, type}) => {
         isLoading: false,
         isError: true,
         isFulfilled: false,
-        err: payload.error.response?.data.result.message,
+        err: payload.error.response?.data.result.msg,
       };
     case editProfile.concat('-', Fulfilled):
       return {
@@ -49,7 +49,7 @@ const profileReducer = (prevState = initialState, {payload, type}) => {
         isLoading: false,
         isError: true,
         isFulfilled: false,
-        err: payload.error.response?.data.result.message,
+        err: payload.error.response?.data.result.msg,
       };
     case getProfileContact.concat('-', Fulfilled):
       return {
@@ -72,7 +72,7 @@ const profileReducer = (prevState = initialState, {payload, type}) => {
         isLoading: false,
         isError: true,
         isFulfilled: false,
-        err: payload.error.response?.data.result.message,
+        err: payload.error.response?.data.result.msg,
       };
     case getProfileDetail.concat('-', Fulfilled):
       return {

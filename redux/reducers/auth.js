@@ -2,13 +2,11 @@ import {ActionType} from 'redux-promise-middleware';
 import {actionStrings} from '../actions/actionStrings';
 
 const initialState = {
-  result: {
-    data: {
-      id: null,
-      role: '',
-      picture: '',
-      token: '',
-    },
+  data: {
+    id: null,
+    role: '',
+    picture: '',
+    token: '',
   },
   isLoading: false,
   isError: false,
@@ -34,7 +32,7 @@ const authReducer = (prevState = initialState, {payload, type}) => {
         isLoading: false,
         isError: true,
         isFulfilled: false,
-        err: payload.error.response?.data.result.message,
+        err: payload.error.response?.data.result.msg,
       };
     case authLogin.concat('-', Fulfilled):
       return {
@@ -42,7 +40,7 @@ const authReducer = (prevState = initialState, {payload, type}) => {
         isLoading: false,
         isError: false,
         isFulfilled: true,
-        result: payload.data.result,
+        data: payload.data.result.data,
       };
 
     case authLogout.concat('_', Pending):
@@ -58,7 +56,7 @@ const authReducer = (prevState = initialState, {payload, type}) => {
         isLoading: false,
         isError: true,
         isFulfilled: false,
-        err: payload.error.response?.data.result.message,
+        err: payload.error.response?.data.result.msg,
       };
     case authLogout.concat('_', Fulfilled):
       return initialState;
