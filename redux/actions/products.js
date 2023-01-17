@@ -4,7 +4,7 @@ import {
   editProduct,
   deleteProduct,
   createProduct,
-} from '../../modules/api/product';
+} from '../../utils/api/product';
 import {actionStrings} from './actionStrings';
 
 const {Pending, Rejected, Fulfilled} = ActionType;
@@ -70,7 +70,7 @@ const createProductFulfilled = data => ({
 });
 
 // TODO: Get Products Thunk
-const getProductsThunk = (token, cbSuccess, cbDenied, cbLoading) => {
+const getProductsThunk = (cbSuccess, cbDenied, cbLoading) => {
   return async dispatch => {
     try {
       dispatch(getProductsPending());

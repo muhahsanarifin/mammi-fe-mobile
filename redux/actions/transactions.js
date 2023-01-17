@@ -5,7 +5,7 @@ import {
   editTransaction,
   deleteTransaction,
   getHistoryTransaction,
-} from '../../modules/api/transactions';
+} from '../../utils/api/transactions';
 import {actionStrings} from './actionStrings';
 
 const {Pending, Rejected, Fulfilled} = ActionType;

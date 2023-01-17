@@ -1,5 +1,5 @@
 import {ActionType} from 'redux-promise-middleware';
-import {login, logout} from '../../modules/api/auth';
+import {login, logout} from '../../utils/api/auth';
 import {actionStrings} from './actionStrings';
 
 const {Pending, Rejected, Fulfilled} = ActionType;
@@ -35,17 +35,19 @@ const logoutFulfilled = data => ({
 });
 
 // TODO: Login Thunk
-const loginThunk = (body, cbSuccess, cbDenied) => {
+const loginThunk = (body, cbSuccess, cbDenied, cbFromInput) => {
   return async dispatch => {
     try {
       dispatch(loginPending());
       const result = await login(body);
       dispatch(loginFulfilled(result.data));
-      typeof cbSuccess === 'function' && cbSuccess(result.data.result.message);
+      typeof cbSuccess === 'function' && cbSuccess(result.data.result.msg);
     } catch (error) {
       dispatch(loginRejected(error));
       typeof cbDenied === 'function' &&
-        cbDenied(error.response.data.result.message);
+        cbDenied(error.response.data.result.msg);
+    } finally {
+      typeof cbFromInput === 'function' && cbFromInput();
     }
   };
 };

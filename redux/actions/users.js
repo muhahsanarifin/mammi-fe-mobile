@@ -70,18 +70,18 @@ const deleteUserFulfilled = data => ({
 });
 
 // TODO: Register Thunk
-const registerThunk = (body, cbSuccess, cbDenied, cbLoading) => {
+const registerThunk = (body, cbSuccess, cbDenied) => {
   return async dispatch => {
     try {
       dispatch(registerPending());
-      typeof cbLoading === 'function' && cbLoading();
       const result = await register(body);
       console.log(result.data);
       dispatch(registerFulfilled(result.data));
-      typeof cbSuccess === 'function' && cbSuccess();
+      typeof cbSuccess === 'function' && cbSuccess(result.data.msg);
     } catch (error) {
       dispatch(registerRejected(error));
-      typeof cbDenied === 'function' && cbDenied();
+      typeof cbDenied === 'function' &&
+        cbDenied(error.response.data.msg);
     }
   };
 };

@@ -3,7 +3,7 @@ import {
   editprofile,
   getprofilecontact,
   getprofiledetail,
-} from '../../modules/api/profile';
+} from '../../utils/api/profile';
 import {actionStrings} from './actionStrings';
 
 const {Pending, Rejected, Fulfilled} = ActionType;
