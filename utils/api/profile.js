@@ -3,21 +3,21 @@ import {MAMMI_BE_API_URL} from '@env';
 
 const BASE_URL = `${MAMMI_BE_API_URL}api/v1`;
 
-const config = token => {
+const config = accessToken => {
   return {
     headers: {
-      'x-access-token': `${token}`,
+      'x-access-token': `${accessToken}`,
     },
   };
 };
 
-const editprofile = (body, token) =>
-  Axios.patch(`${BASE_URL}/users/profile/edit`, body, config(token));
+const editProfile = (body, accessToken) =>
+  Axios.patch(`${BASE_URL}/users/acc/profile/edit`, body, config(accessToken));
 
-const getprofilecontact = (id, token) =>
-  Axios.get(`${BASE_URL}/users/profile/${id}`, config(token));
+const getProfileContact = accessToken =>
+  Axios.get(`${BASE_URL}/users/acc/profile/contact/id`, config(accessToken));
 
-const getprofiledetail = (id, token) =>
-  Axios.get(`${BASE_URL}/users/${id}`, config(token));
+const getProfileDetail = accessToken =>
+  Axios.get(`${BASE_URL}/users/acc/profile/detail/id`, config(accessToken));
 
-export {editprofile, getprofilecontact, getprofiledetail};
+export {editProfile, getProfileContact, getProfileDetail};

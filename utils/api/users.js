@@ -11,14 +11,15 @@ const config = token => {
   };
 };
 
-const getUsers = token => Axios.get(`${BASE_URL}/users`, config(token));
+const getUsers = (accessToken, queryParams) =>
+  Axios.get(`${BASE_URL}/users?${queryParams}`, config(accessToken));
 
-const deleteUser = token =>
-  Axios.delete(`${BASE_URL}/users/user/delete`, config(token));
+const deleteAccount = accessToken =>
+  Axios.delete(`${BASE_URL}/users/acc/delete`, config(accessToken));
 
 const register = body => Axios.post(`${BASE_URL}/users/register`, body);
 
-const editPassword = (body, token) =>
-  Axios.patch(`${BASE_URL}/users/password/edit`, body, config(token));
+const editPassword = (body, accessToken) =>
+  Axios.patch(`${BASE_URL}/users/password/edit`, body, config(accessToken));
 
-export {getUsers, deleteUser, register, editPassword};
+export {getUsers, deleteAccount, register, editPassword};
